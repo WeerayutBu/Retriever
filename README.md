@@ -7,12 +7,11 @@ A retrieval demo built on LlamaIndex, with optional reranking support.
 ```bash
 python -m uvicorn api.main:app --reload
 
+# Test: curl "http://127.0.0.1:8000/retrieve?q=what%20causes%20hiccups"
+
 ```
 
-#### Request API
-```bash
-curl "http://127.0.0.1:8000/retrieve?q=what%20causes%20hiccups"
-```
+
 
 #### Retrieval code
 ```python
