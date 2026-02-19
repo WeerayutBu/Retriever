@@ -3,6 +3,18 @@ A retrieval demo built on LlamaIndex, with optional reranking support.
 
 ## Basic Usage
 
+#### Startup API
+```bash
+python -m uvicorn api.main:app --reload
+
+```
+
+#### Request API
+```bash
+curl "http://127.0.0.1:8000/retrieve?q=what%20causes%20hiccups"
+```
+
+#### Retrieval code
 ```python
 import pandas as pd
 from core.retriever import Retriever
@@ -24,3 +36,4 @@ nodes = r.search(query)
 pd.DataFrame(
     [{"id": n.metadata["id"], "text": n.text, "score": n.score} for n in nodes]
 ).head(3)
+```
