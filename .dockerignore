@@ -9,5 +9,4 @@ __pycache__/
 <!-- .cache -->
 .venv
 <!-- data/data.csv -->
-data/proc.ipynb
-notebooks
+data

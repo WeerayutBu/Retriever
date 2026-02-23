@@ -8,8 +8,7 @@ A retrieval demo built on LlamaIndex, with optional reranking support.
 docker build -t retriever .
 
 # Using Image Env
-docker run --rm -it --gpus all -p 8000:8000 \
-    retriever uvicorn api.main:app --host 0.0.0.0 --port 8000 --reload
+docker run --rm -it --gpus all -p 8000:8000 --shm-size=4g retriever uvicorn api.main:app --host 0.0.0.0 --port 8000 --reload  
 
 # Dev
 docker run --rm -it --gpus all -p 8000:8000 retriever bash 
